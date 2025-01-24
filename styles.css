@@ -1,0 +1,122 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif; /* Modern, clean font */
+  text-align: center;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Beautiful gradient background */
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#settings {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Main Content */
+.content-container {
+  margin-top: 100px;
+}
+
+/* App Title */
+#app-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Button Styles */
+button {
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.primary-btn:hover {
+  background-color: #0056b3;
+}
+
+.secondary-btn {
+  background-color: #ffcc00;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.secondary-btn:hover {
+  background-color: #e6b800;
+}
+
+/* Alarm Trigger Screen */
+#alarm-trigger {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Dark overlay */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+#clock {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#tidy-message {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #app-title {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  #tidy-message {
+    font-size: 2rem;
+  }
+}
+
+/* Hidden Class */
+.hidden {
+  display: none;
+}
