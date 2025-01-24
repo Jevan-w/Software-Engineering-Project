@@ -1,0 +1,23 @@
+{
+  "name": "roomcleaner",
+  "version": "1.0.0",
+  "description": "Tidied is a sleek and intuitive web app designed to help youngsters and teens maintain a clean and organized living space. By setting a weekly reminder, users can establish a consistent cleaning routine, ensuring their rooms are always tidy. The app takes inspiration from the iPhone alarm clock system, offering a familiar interface that integrates seamlessly into users' daily lives.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jevan-w/Software-Engineering-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jevan-w/Software-Engineering-Project/issues"
+  },
+  "homepage": "https://github.com/Jevan-w/Software-Engineering-Project#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
