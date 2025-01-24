@@ -14,17 +14,18 @@ function calculateNextSunday(date) {
 
 // Function: Trigger the alarm modal
 function triggerAlarm() {
-  alarmTrigger.classList.remove("hidden"); // Show the modal
-  alarmStatus.textContent = ""; // Clear alarm status
-  console.log("Alarm triggered! Modal is now visible.");
+  if (alarmTrigger) {
+    alarmTrigger.classList.remove("hidden"); // Show the modal
+    alarmStatus.textContent = ""; // Clear alarm status
+    console.log("Alarm triggered! Modal is now visible.");
+  }
 }
 
 // Function: Snooze the alarm and completely remove the modal
 function snoozeAlarm() {
   console.log("Snooze button clicked.");
-  const alarmTriggerElement = document.getElementById("alarm-trigger");
-  if (alarmTriggerElement) {
-    alarmTriggerElement.remove(); // Completely remove the modal from the DOM
+  if (alarmTrigger) {
+    alarmTrigger.remove(); // Completely remove the modal from the DOM
     console.log("Snooze clicked. Alarm modal removed.");
   } else {
     console.error("Alarm modal not found!");
@@ -39,11 +40,23 @@ function setWeeklyAlarm() {
 
   if (timeUntilAlarm > 0) {
     setTimeout(triggerAlarm, timeUntilAlarm);
-    alarmStatus.textContent = `Alarm set for next Sunday at 9:00 AM.`;
+    if (alarmStatus) {
+      alarmStatus.textContent = `Alarm set for next Sunday at 9:00 AM.`;
+    }
     console.log(`Alarm set for ${nextSunday}`);
   }
 }
 
-// Event Listeners
-setTimerBtn.addEventListener("click", setWeeklyAlarm);
-snoozeBtn.addEventListener("click", snoozeAlarm);
+// Safely attach event listeners
+if (setTimerBtn) {
+  setTimerBtn.addEventListener("click", setWeeklyAlarm);
+}
+
+if (snoozeBtn) {
+  snoozeBtn.addEventListener("click", snoozeAlarm);
+}
+
+// Export functions for testing
+if (typeof module !== "undefined") {
+  module.exports = { calculateNextSunday, triggerAlarm, snoozeAlarm };
+}
